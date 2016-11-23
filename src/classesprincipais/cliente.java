@@ -7,7 +7,7 @@ package classesprincipais;
 
 /**
  *
- * @author lucas
+ * @author lucas ansei
  */
 public class cliente {
     String cpf, nome, nascimento, telefone, endereco, email;

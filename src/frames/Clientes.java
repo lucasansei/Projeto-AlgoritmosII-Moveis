@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author lucas
+ * @author lucas ansei
  */
 public class Clientes extends javax.swing.JFrame {
     
@@ -54,6 +54,7 @@ public class Clientes extends javax.swing.JFrame {
         btEditar = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         btExcluir = new javax.swing.JButton();
+        btExcluir1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -137,7 +138,7 @@ public class Clientes extends javax.swing.JFrame {
                         .addComponent(lblEmail2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,6 +207,13 @@ public class Clientes extends javax.swing.JFrame {
             }
         });
 
+        btExcluir1.setText("Sair");
+        btExcluir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExcluir1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -219,9 +227,10 @@ public class Clientes extends javax.swing.JFrame {
                 .addComponent(btEditar)
                 .addGap(18, 18, 18)
                 .addComponent(btLimpar)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btExcluir)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addComponent(btExcluir1, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,7 +241,8 @@ public class Clientes extends javax.swing.JFrame {
                     .addComponent(btBuscar)
                     .addComponent(btEditar)
                     .addComponent(btLimpar)
-                    .addComponent(btExcluir))
+                    .addComponent(btExcluir)
+                    .addComponent(btExcluir1))
                 .addGap(20, 20, 20))
         );
 
@@ -241,10 +251,10 @@ public class Clientes extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -352,6 +362,10 @@ public class Clientes extends javax.swing.JFrame {
         txEmail.setText("");
     }//GEN-LAST:event_btLimparActionPerformed
 
+    private void btExcluir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluir1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btExcluir1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -391,6 +405,7 @@ public class Clientes extends javax.swing.JFrame {
     private javax.swing.JButton btBuscar;
     private javax.swing.JButton btEditar;
     private javax.swing.JButton btExcluir;
+    private javax.swing.JButton btExcluir1;
     private javax.swing.JButton btLimpar;
     private javax.swing.JButton btSalvar;
     private javax.swing.JFormattedTextField ftfCpf;
